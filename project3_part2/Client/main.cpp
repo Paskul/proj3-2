@@ -33,9 +33,7 @@ int main() {
     if (1 != DH_generate_key(privkey)) handleErrors();
 
     int codes;
-    int secret_size;
 
-    
     // TODO: Write a method to generate the public and private key pair
     
     
