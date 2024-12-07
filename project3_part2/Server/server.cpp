@@ -4,6 +4,7 @@
 #include <openssl/rand.h>
 #include <openssl/bn.h>
 #include <openssl/err.h>
+#include <cstring>
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 // Handles client communication
@@ -49,7 +50,6 @@ void handleClient(int clientSocket) {
 
     DH *privkey = DH_get_2048_256();
     int codes;
-    int secret_size;
 
     // TODO: Write a method to generate the public and private key pair
     if (!privkey) handleErrors();
